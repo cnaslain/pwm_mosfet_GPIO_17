@@ -37,9 +37,11 @@ sudo systemctl enable pwm_mofset_GPIO_17
 ```
 Logs:
 ```
-$ cat /var/log/pwm_mofset_GPIO_17.log
+$ watch -n 5 cat /var/log/pwm_mofset_GPIO_17.log
+Every 5.0s: cat /var/log/pwm_mofset_GPIO_17.log             raspberrypi4.xxx.com: Sun Jan 19 19:44:50 2020
 actualTemp 46.00 TempDiff 1.00 pDiff 15.00 iDiff 10.40 fanSpeed    25
 
-$ cat /var/log/pwm_mofset_GPIO_17.rpm
+$ watch -n 5 cat /var/log/pwm_mofset_GPIO_17.speed
+Every 5.0s: cat /var/log/pwm_mofset_GPIO_17.speed             raspberrypi4.xxx.com: Sun Jan 19 19:52:12 2020
 25
 ```
