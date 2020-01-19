@@ -1,4 +1,4 @@
-# Simple MOFSET solution to have a PWM solution using a standard 2 pins ventilator on a raspberry pi.
+# Simple MOFSET solution to have a PWM 2 pins fan on a raspberry pi
 
 This implements Andreas Spiess' article and python code (http://www.sensorsiot.org/variable-speed-cooling-fan-for-raspberry-pi-using-pwm-video138/); thanks to him for this nice PWM solution.
 
