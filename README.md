@@ -3,7 +3,7 @@
 This implements Andreas Spiess' article and python code (http://www.sensorsiot.org/variable-speed-cooling-fan-for-raspberry-pi-using-pwm-video138/).
 I have simply removed the battery stuffs (unused) and add a systemd service?
 
-##Hardware
+## Hardware
 
 Components:
 - MOFSET IRLZ44n
@@ -12,7 +12,7 @@ Components:
 - Flyback diode 1N400X
 - 5V 2 pins ventilator
 
-##Software
+## Software
 
 I've just modified the following stuffs on the python script:
 - new log file for the data output, so I can read them with a LUA script in Domoticz
