@@ -10,7 +10,9 @@ Components:
 - R1 1K ohms
 - R2: 470 ohms
 - Flyback diode 1N400X
-- 5V 2 pins ventilator
+- 5V 2 pins fan
+
+Wire chart: ![Wiring diagram](electronic_diagram.jpg)
 
 ## Software
 
