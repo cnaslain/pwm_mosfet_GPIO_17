@@ -1,0 +1,14 @@
+[Unit]
+Description=Simple GPIO 17 PWM fan with MOFSET script
+After=multi-user.target
+
+[Service]
+Type=simple
+StandardOutput=null
+StandardError=null
+User=root
+ExecStart=/usr/bin/python /home/pi/pwm_fan/pwm_mofset_GPIO_17.py
+WorkingDirectory=/home/pi/pwm_fan
+
+[Install]
+WantedBy=multi-user.target
