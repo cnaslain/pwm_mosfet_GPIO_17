@@ -1,6 +1,7 @@
 # Simple MOFSET solution to have a PWM solution using a standard 2 pins ventilator on a raspberry pi.
 
-This implements Andreas Spiess' article and python code (http://www.sensorsiot.org/variable-speed-cooling-fan-for-raspberry-pi-using-pwm-video138/).
+This implements Andreas Spiess' article and python code (http://www.sensorsiot.org/variable-speed-cooling-fan-for-raspberry-pi-using-pwm-video138/); thanks to him for this nice PWM solution.
+
 I have simply removed the battery related code (unused), add a systemd service to start the program at boot at log the last output information (details as log and the fan speed % value).
 
 ## Hardware
