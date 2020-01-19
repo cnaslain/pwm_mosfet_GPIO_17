@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # Author: Andreas Spiess
 import os
 import time
@@ -12,6 +12,9 @@ fanPin = 17 # The pin ID, edit here to change it
 #batterySensPin = 18
 
 desiredTemp = 45 # The maximum temperature in Celsius after which we trigger the fan
+
+logFile = "/var/log/pwm_mofset_GPIO_17.log" #Path to logfile
+speedFile = "/var/log/pwm_mofset_GPIO_17.speed" #Path to speed file
 
 fanSpeed=100
 sum=0
@@ -46,7 +49,16 @@ def handleFan():
         sum=100
     if sum<-100:
         sum=-100
-    #print("actualTemp %4.2f TempDiff %4.2f pDiff %4.2f iDiff %4.2f fanSpeed %5d" % (actualTemp,diff,pDiff,iDiff,fanSpeed))
+    message="actualTemp %4.2f TempDiff %4.2f pDiff %4.2f iDiff %4.2f fanSpeed %5d" % (actualTemp,diff,pDiff,i\
+Diff,fanSpeed)
+    #print message  #Uncomment here for testing
+
+    log = open(logFile,'w')
+    log.write(message)
+
+    speed = open(speedFile,'w')
+    speed.write(("{0}".format(fanSpeed)))
+
     myPWM.ChangeDutyCycle(fanSpeed)
     return()
 #def handleBattery():
@@ -71,7 +83,7 @@ try:
     while True:
         handleFan()
 #        handleBattery()
-        sleep(1) # Read the temperature every 5 sec, increase or decrease this limit if you want
+        sleep(5) # Read the temperature every 5 sec, increase or decrease this limit if you want
 except KeyboardInterrupt: # trap a CTRL+C keyboard interrupt
     fanOFF()
     GPIO.cleanup() # resets all GPIO ports used by this program
