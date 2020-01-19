@@ -9,7 +9,7 @@ Components:
 - MOFSET IRLZ44n
 - R1 1K ohms
 - R2: 470 ohms
-- Flyback diode 1N400X
+- Flyback diode 1N4001
 - 5V 2 pins fan
 
 Wire chart: ![Wiring diagram](electronic_diagram.jpg)
