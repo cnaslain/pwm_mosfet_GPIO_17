@@ -1,7 +1,7 @@
 # Simple MOFSET solution to have a PWM solution using a standard 2 pins ventilator on a raspberry pi.
 
 This implements Andreas Spiess' article and python code (http://www.sensorsiot.org/variable-speed-cooling-fan-for-raspberry-pi-using-pwm-video138/).
-I have simply removed the battery stuffs (unused) and add a systemd service?
+I have simply removed the battery related code (unused), add a systemd service to start the program at boot at log the last output information (details as log and the fan speed % value).
 
 ## Hardware
 
@@ -32,4 +32,12 @@ sudo systemctl daemon-reload
 sudo systemctl start pwm_mofset_GPIO_17
 sudo systemctl status -a pwm_mofset_GPIO_17
 sudo systemctl enable pwm_mofset_GPIO_17
+```
+Logs:
+```
+$ cat /var/log/pwm_mofset_GPIO_17.log
+actualTemp 46.00 TempDiff 1.00 pDiff 15.00 iDiff 10.40 fanSpeed    25
+
+$ cat /var/log/pwm_mofset_GPIO_17.rpm
+25
 ```
