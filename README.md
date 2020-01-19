@@ -13,7 +13,7 @@ Components:
 - Flyback diode 1N4001
 - 5V 2 pins fan
 
-Wire chart: ![Wiring diagram](electronic_diagram.jpg =350x)
+Wire chart: ![Wiring diagram](electronic_diagram.jpg)
 
 ## Software
 
