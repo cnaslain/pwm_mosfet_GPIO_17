@@ -17,7 +17,8 @@ Wire chart: ![Wiring diagram](electronic_diagram.jpg)
 ## Software
 
 I've just modified the following stuffs on the python script:
-- new log file for the data output, so I can read them with a LUA script in Domoticz
+- remove all battery-related code (unused)
+- new log file for the debug and fan speed output, so I can read them with a LUA script in Domoticz
 
 I've also added a new simple systemd service.
 
