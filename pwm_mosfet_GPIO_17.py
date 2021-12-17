@@ -49,8 +49,7 @@ def handleFan():
         sum=100
     if sum<-100:
         sum=-100
-    message="actualTemp %4.2f TempDiff %4.2f pDiff %4.2f iDiff %4.2f fanSpeed %5d" % (actualTemp,diff,pDiff,i\
-Diff,fanSpeed)
+    message="actualTemp %4.2f TempDiff %4.2f pDiff %4.2f iDiff %4.2f fanSpeed %5d" % (actualTemp,diff,pDiff,iDiff,fanSpeed)
     #print message  #Uncomment here for testing
 
     log = open(logFile,'w')
